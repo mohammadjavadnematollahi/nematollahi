@@ -49,7 +49,7 @@ class StudentData:
         """Save the top three averages with the names.""" #################
         top_three = sorted(self.students, key=lambda x: x['average'], reverse=True)[:3]
         with open(output_file, 'w', newline='', encoding='utf-8') as file:
-            writer = csv.writer(file)
+            writer = csv.writer(file) ###################
             writer.writerow(['name', 'average'])
             for student in top_three:
                 writer.writerow([student['name'], student['average']])
